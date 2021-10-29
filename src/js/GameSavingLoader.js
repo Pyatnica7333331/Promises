@@ -6,8 +6,6 @@ export default class GameSavingLoader {
   static load() {
     return read()
       .then((result) => json(result))
-      .then((id, created, userId, userName, userLevel, userPoints) => new GameSaving(
-        id, created, userId, userName, userLevel, userPoints,
-      ));
+      .then((data) => new GameSaving(data));
   }
 }

@@ -1,8 +1,7 @@
 export default class GameSaving {
-  constructor(dataString) {
-    const data = JSON.parse(dataString);
-    this.id = data.id;
-    this.created = data.created;
-    this.userInfo = data.userInfo;
+  constructor(id, created, userInfo) {
+    this.id = id;
+    this.created = created;
+    this.userInfo = userInfo;
   }
 }
